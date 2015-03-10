@@ -28,9 +28,13 @@ inputdict = {'Up' : 'd',
              "Start" : 'k'
              }
 startup()
+process = twitter.TwitterProcess()
+
+tweet = twitter.TweetBuffer()
+
 while True:
-    process = twitter.TwitterProcess()
     process.cycle()
     letter_to_send = inputdict[process.button]
     keypresser.presskey(letter_to_send)
-    time.sleep(1)
+    time.sleep(1.5)
+
